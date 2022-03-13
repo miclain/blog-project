@@ -1,0 +1,138 @@
+@import 'bootstrap';
+
+//navbar
+.navbar {
+  background-color: #ffa98f !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: #ffa98f;
+  color: gray;
+}
+
+.dropdown-item {
+  color: white
+}
+
+
+//body
+#home-container {
+  background-image: asset-url('flower_banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+html,
+body {
+  height: 100%;
+  color: gray;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+
+//footer
+#sticky-footer {
+  flex-shrink: none;
+}
+
+// .backg {
+//   background-image: asset-url('1.png');
+// }
+
+// index
+.btn-outline-success:hover {
+  background-color: #54e8b4e8;
+  color: black;
+}
+
+.btn-outline-info:hover {
+  background-color: lightblue;
+}
+
+.btn-outline-danger:hover {
+  background-color: lightcoral;
+}
+
+.article-card-title {
+  text-decoration: none;
+  color: #ffa98f;
+}
+
+//form
+.btn-form-cancel{
+  border-color: #fd9879;
+  color: gray;
+  font-weight: bold;
+}
+
+.btn-form-cancel:hover{
+  font-weight: bold;
+  background-color: #ffa98f;
+  color: white;
+}
+
+.btn-form-save{
+  background-color: rgba(77, 209, 209, 0.733);
+  border-color: rgba(77, 209, 209, 0.733);
+  color: gray;
+  font-weight: bold;
+}
+
+.btn-form-save:hover{
+  font-weight: bold;
+  background-color: rgb(24, 202, 202);
+  border-color: rgb(24, 202, 202);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+.same-size {
+  width: 15%;
+  margin: 0 2em;
+  border-radius: 0;
+}
+
+.alert-dismissible {
+  padding-right: 1em;
+}
+
+.close-btn {
+  border-color: gray;
+}
+
+.close-btn:hover {
+  background-color: white;
+}
+
+.article {
+  background-color: aliceblue;
+}
