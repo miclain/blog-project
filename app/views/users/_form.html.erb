@@ -1,0 +1,38 @@
+<div class="container">
+  <%= render 'shared/errors', obj: @user %>
+  <div class="justify-content-md-center row mt-4 form-label">
+    <%= form_with(model: @user, data: { turbo: false }, local: true) do |f| %>
+      <div class="mb-4 form-group row">
+        <label for="formGroupExampleInput" class="form-label mb-0">
+          <%= f.label :username %><br/>
+        </label>
+        <div>
+          <%= f.text_field :username, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="mb-4 form-group row">
+        <label for="formGroupExampleInput2" class="form-label mb-0">
+          <%= f.label :email %><br/>
+        </label>
+        <div>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+      </div >
+
+      <div class="mb-4 form-group row">
+        <label for="formGroupExampleInput2" class="form-label mb-0">
+          <%= f.label :password %><br/>
+        </label>
+        <div>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div >
+      
+      <div class="btn-group d-flex justify-content-around">
+          <%= f.submit "Sign Up", class:"btn btn-form-save p-2 same-size" %>
+          <%= link_to 'Cancel and Return to articles listing', articles_path, class:"btn btn-form-cancel p-2 same-size" %>
+      </div>
+    <% end %>
+  </div>
+</div>
