@@ -1,11 +1,12 @@
 <% if obj.errors.any? %>
   <div class="alert alert-secondary alert-dismissible fade show mt-3" role="alert">
     <div class="d-flex justify-content-between">
-      <h4 class="alert-heading">The following errors prevented the article from being saved</h4>
+      <h4 class="alert-heading">Ops...</h4>
       <button type="button" class="btn close close-btn .justify-content-end" data-bs-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+        <span aria-hidden="true">&times;</span><br>
       </button>
     </div>
+    <h5 class="alert-heading">The following errors prevented the <%= obj.class.name.downcase %> from being saved</h5>
     <ul>
       <% obj.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
