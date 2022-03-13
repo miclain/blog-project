@@ -1,5 +1,5 @@
 <div class="container">
-  <%= render 'shared/errors' %>
+  <%= render 'shared/errors', obj: @article %>
   <div class="justify-content-md-center row mt-4">
     <%= form_with(model: @article, data: { turbo: false }, local: true) do |f| %>
       <div class="mb-4 form-group row">
