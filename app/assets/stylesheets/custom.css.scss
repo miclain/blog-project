@@ -50,6 +50,17 @@ body {
   flex: 1 0 auto;
 }
 
+.btn-signup {
+  background-color:white;
+  color: #ff7b52;
+  font-weight: bold;
+  border-color: #fd9879;
+}
+
+.btn-signup:hover {
+  background-color: #fd9879;
+  color: #fff;
+}
 
 //footer
 #sticky-footer {
