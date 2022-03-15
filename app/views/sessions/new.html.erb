@@ -1,0 +1,33 @@
+<h2 class="text-center mt-4">Login</h2>
+
+<div class="container ">
+  
+  <div class="justify-content-center row mt-4 form-label">
+    <%= form_with(scope: :session, url: login_path, data: { turbo: false }, local: true) do |f| %>
+      <div class="mb-4 form-group row">
+        <label for="formGroupExampleInput2" class="form-label mb-0">
+          <%= f.label :email %><br/>
+        </label>
+        <div>
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter your email address" %>
+        </div>
+      </div >
+
+      <div class="mb-4 form-group row">
+        <label for="formGroupExampleInput2" class="form-label mb-0">
+          <%= f.label :password %><br/>
+        </label>
+        <div>
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+        </div>
+      </div >
+
+      <div class="d-flex justify-content-center ">
+        <%= f.submit "Login", class:"btn btn-form-save p-2 col-3" %>
+      </div>
+      <div class="d-flex justify-content-center p-2">
+        <%= link_to '[ Cancel and Return to articles listing ]', articles_path, class:"btn btn-form-cancel text-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
