@@ -21,7 +21,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <%= link_to "Login", login_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", logout_path, class:"nav-link", data: { "turbo-method": :delete } %>
         </li>
       </ul>
       <form class="d-flex">
