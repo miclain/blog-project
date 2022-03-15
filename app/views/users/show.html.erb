@@ -1,4 +1,18 @@
-<h2 class="text-center mt-4 mb-3"><%= @user.username %>'s profile </h2>
+<h2 class="text-center mt-4 mb-3"><%= @user.username.capitalize() %>'s profile </h2>
 <%= gravatar_for @user, size: 200 %>
-<h2 class="text-center mt-3 mb-3">Articles</h2>
-<%= render 'articles/articles' %>
+
+<div class="text-center mt-4">
+  <%= link_to "Edit your profile", edit_user_path(@user), class:"btn btn-outline-info" %>
+</div>
+
+<h2 class="text-center mt-4 mb-2">Articles</h2>
+
+<div class="flickr_pagination mt-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
+
+<%= render 'articles/article' %>
+
+<div class="flickr_pagination mb-3">
+  <%= will_paginate @articles, :container => false %>
+</div>

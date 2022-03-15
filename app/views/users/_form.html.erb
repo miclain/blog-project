@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container ">
   <%= render 'shared/errors', obj: @user %>
-  <div class="justify-content-md-center row mt-4 form-label">
+  <div class="justify-content-center row mt-4 form-label">
     <%= form_with(model: @user, data: { turbo: false }, local: true) do |f| %>
       <div class="mb-4 form-group row">
         <label for="formGroupExampleInput" class="form-label mb-0">
