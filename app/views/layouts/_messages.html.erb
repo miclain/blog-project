@@ -1,6 +1,6 @@
 <div class="container">
   <% flash.each do |name, msg| %>
-    <div class="alert alert-success alert-dismissible fade show mt-3 d-flex justify-content-between align-content" role="alert">
+    <div class="alert alert-<%= name == "notice" ? "success" : "ligth" %> alert-dismissible fade show mt-3 d-flex justify-content-between align-content" role="alert">
       <p class="align-self-center mb-0">
         <%= msg %>
       </p>
