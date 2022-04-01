@@ -1,0 +1,29 @@
+<h2 class="text-center mt-4">Categories</h2>
+
+<div class="flickr_pagination mb-3">
+  <%= will_paginate @categories, :container => false %>
+</div>
+
+<div class="container ">
+  <% @categories.each do |category| %>
+    <div class="row justify-content-center">
+      <div class="mt-4 col-4">
+        <div class="card shadow mb-5 bg-body rounded">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= link_to category.name, category_path(category), class:"article-card-title" %></h5>
+          </div>
+          <div class="card-footer text-muted text-center">
+            <small class="card-text">
+              created <%= time_ago_in_words(category.created_at) %> ago,
+              edited <%= time_ago_in_words(category.updated_at) %> ago 
+            </small>
+          </div>
+        </div>
+      </div>  
+    </div>
+  <% end %>
+</div>
+
+<div class="flickr_pagination mb-3">
+  <%= will_paginate @categories, :container => false %>
+</div>
