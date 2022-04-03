@@ -1,7 +1,7 @@
 <h2 class="text-center mt-4 mb-3"><%= @user.username.capitalize() %>'s profile </h2>
 <%= gravatar_for @user, size: 200 %>
 
-<% if logged_in && @user == current_user %>
+<% if logged_in? && @user == current_user %>
   <div class="text-center mt-4">
     <%= link_to "Edit your profile", edit_user_path(@user), class:"btn btn-outline-info" %>
   </div>
