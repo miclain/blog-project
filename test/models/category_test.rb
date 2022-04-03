@@ -31,5 +31,4 @@ class UserTest < ActiveSupport::TestCase
     assert_not @category.valid?
   end
 
-  end
 end

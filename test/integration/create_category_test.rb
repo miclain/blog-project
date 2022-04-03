@@ -4,7 +4,7 @@ class CreateCategoryTest < ActionDispatch::IntegrationTest
   test "get new category form and create category" do
     get "/categories/new"
     assert_response :success
-    assert_difference 'Category.cont', 1 do
+    assert_difference 'Category.count', 1 do
       post categories_path, params: { category: { name: "Sports" } }
       assert_response :redirect
     end
@@ -16,7 +16,7 @@ class CreateCategoryTest < ActionDispatch::IntegrationTest
   test "get new category form and reject invalid category submission" do
     get "/categories/new"
     assert_response :success
-    assert_no_difference 'Category.cont' do
+    assert_no_difference 'Category.count' do
       post categories_path, params: { category: { name: " " } }
     end
     assert_match "errors", response.body
