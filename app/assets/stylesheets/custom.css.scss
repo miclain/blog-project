@@ -35,12 +35,6 @@
   background-color: gray;
 }
 
-.delete-link:hover {
-  background-color: black;
-  color: white
-}
-
-
 //body
 #home-container {
   background-image: asset-url('flower_banner.png');
@@ -113,9 +107,14 @@ body {
 
 .btn-form-save:hover{
   font-weight: bold;
-  background-color:  #fd9879;;
-  border-color:  #fd9879;;
+  background-color:  #fd9879;
+  border-color:  #fd9879;
   color: white;
+}
+
+.bg-success:hover{
+  color: white;
+  background-color:  #fd9879;
 }
 
 a {
@@ -144,6 +143,10 @@ a:hover {
 
 .alert-ligth {
   background-color: rgb(243, 243, 243);
+}
+
+.badge:hover{
+  color: black;
 }
 
 //Pagination
