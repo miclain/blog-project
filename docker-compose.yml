@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  alpha_blog:
+    build: .
+    working_dir: /app
+    command: rails s -b 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:
