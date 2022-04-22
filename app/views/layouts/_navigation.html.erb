@@ -16,10 +16,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <% if logged_in? %>
               <li><%= link_to "Create new article", new_article_path, class: "dropdown-item" %></li>
+              <li><hr class="dropdown-divider"></li>
             <% end %>
             <li><%= link_to "View articles", articles_path, class: "dropdown-item" %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -33,37 +32,34 @@
             <li><%= link_to "View categories", categories_path, class: "dropdown-item" %></li>
           </ul>
         </li>
+      </ul>
+      <ul class="navbar-nav  mb-2 mb-lg-0">
         <% if logged_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <%="Admin" if current_user.admin?%> Profile <%=[current_user.username.capitalize()]%>
+              <%="Admin " if current_user.admin?%><%=current_user.username.capitalize()%>'s Profile
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %></li>
               <li><%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %></li>
               <li><%= 
-                link_to "⛔ Delete profile", user_path(current_user), 
+                link_to "Delete profile", user_path(current_user), 
                 data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}, 
                 class: "dropdown-item text-danger" 
               %></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to "Logout", logout_path, class: "dropdown-item", data: { "turbo-method": :delete } %></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <%= link_to "Logout", logout_path, class:"nav-link", data: { "turbo-method": :delete } %>
-          </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", login_path, class:"nav-link" %>
+          <li class="nav-item me-1">
+            <%= link_to "Log in", login_path, class:"btn btn-login" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign Up", signup_path, class:"nav-link" %>
+            <%= link_to "Sign up!", signup_path, class: "btn btn-signup-nav" %>
           </li>
         <% end %>        
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
