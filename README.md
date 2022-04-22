@@ -20,25 +20,43 @@ Alpha Blog project from 'The Complete Ruby on Rails Developer Course' of Mashrur
 ## Some of the views:
 
 Home page:
+
 <img src="app/assets/images/Readme/root.png" alt="Home page"/>
 
+<br>
+
 Home page on small screen:
+
 <img src="app/assets/images/Readme/home_small.png" alt="signup form"/>
-app/assets/images/Readme/home_small.png
+
+<br>
 
 Sign up form:
+
 <img src="app/assets/images/Readme/signup_form.png" alt="sign up form"/>
 
+<br>
+
 Log in form:
+
 <img src="app/assets/images/Readme/login_form.png" alt="log in form"/>
 
+<br>
+
 Categories listing:
+
 <img src="app/assets/images/Readme/categories_index.png" alt="categories listing"/>
 
+<br>
+
 Articles listing:
+
 <img src="app/assets/images/Readme/articles_index.png" alt="articles listing"/>
 
+<br>
+
 Admin view for articles listing:
+
 <img src="app/assets/images/Readme/admin_view.png" alt="articles listing"/>
 
 <br>
